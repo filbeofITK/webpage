@@ -1,27 +1,22 @@
-<template>
-  <!-- Kartyak -->
+<template lang="html">
+
   <div class="container border position-fixed top-50 start-50 translate-middle">
     <div class="row">
       <div class="col-12">
-        <div class="card"> <!-- Ez kikerül cutom componentnek és v forral végigiterálom -->
-          <div class="card-body">
-            <h5 class="card-title">Cím</h5>
-            <p calss="card-text"> Absztrakt.</p>
-            <!--Kell: cim Absztrakt eleje datum -->
-            <!--Hower eseten megno hogy latsszon a teljes absztrakt  -->
-            <!--a szerző neve és egy link a megnyitásra -->
-          </div>
-        </div>
+        <DataCard />
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
 // @ is an alias to /src
-
+import DataCard from "@/components/DataCard.vue"
 export default {
   name: 'HomeView',
-  components: {}
+  components: {
+    DataCard,
+  }
 }
 </script>
