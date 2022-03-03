@@ -12,12 +12,6 @@
           Dátum
         </div>
       </div>
-      <div class="row ">
-        <div class="col sm-1">
-          <router-link to="/about" class="btn btn-outline-secondary">Open</router-link>
-
-        </div>
-      </div>
       <!--Vuejs fogja fetölteni ezeket megfelelő adatokkal. -->
     </div>
   </div>
