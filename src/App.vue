@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar nav-pills navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top nav-pills navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -34,6 +34,7 @@
 
 nav {
   padding: 30px;
+  padding-bottom: 80px;
 }
 
 nav a {
@@ -44,4 +45,20 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+body {
+  padding-top: 200px;
+}
+
 </style>
+
+<script>
+import  store  from "@/store/index.js"
+export default {
+  name: 'App',
+  mounted: function (){
+    store.dispatch("dummyLoad")
+  }
+}
+
+</script>

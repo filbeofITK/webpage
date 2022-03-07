@@ -1,9 +1,11 @@
 <template lang="html">
 
-  <div class="container border position-fixed top-50 start-50 translate-middle">
+  <div class="container border">
     <div class="row">
       <div class="col-12">
-        <DataCard />
+        <DataCard v-for="(cardData,idx) in $store.state.cards"
+        :key="idx"
+        :incomingData="cardData" />
       </div>
     </div>
   </div>
@@ -19,4 +21,5 @@ export default {
     DataCard,
   }
 }
+
 </script>
