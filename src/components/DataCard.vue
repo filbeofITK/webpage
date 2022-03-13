@@ -30,7 +30,9 @@
               <h4>{{ incomingData.source }}</h4>
             </div>
             <div class="row">
-              <button class="btn btn-primary" @click="openInstance">Open Full</button>
+              <router-link :to="{ name: 'about', params: {instanceID: incomingData.id} }">
+                <button class="btn btn-primary" @click="loadInstanceData">Open Full</button>
+              </router-link>
             </div>
 
           </div>
@@ -60,7 +62,7 @@ export default {
     toggleCard(){
       this.activity = !this.activity
     },
-    openInstance(){
+    loadInstanceData(){
       store.dispatch("dummyLoadByID",this.incomingData.id)
     }
   }

@@ -44,9 +44,9 @@ export default createStore({
         {
            id: i,
           title: "Title " + (i+1),
-          abst: "Abstract number " + i + " Lorem ipsumm",
+          abst: "Abstract number " + (i + 1) + " Lorem ipsumm",
           date: "2020.02." + (i + 1),
-          source: "https://example" + i + ".com",
+          source: "https://example" + (i + 1) + ".com",
           author: "Scientist " + (i+1)
         })
       }
