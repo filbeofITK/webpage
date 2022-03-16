@@ -7,15 +7,9 @@
           <li class="nav-item">
             <router-link to="/" class="nav-link active">Home</router-link>
           </li>
-          <li class="nav-item">
-              <router-link to="/about" class="nav-link">About</router-link>
-          </li>
         </ul>
       </div>
-      <a class="navbar-brand" href="#">Preeclampsia adatbázis</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="nav-link navbar-brand disabled" href="#" tabindex="-1" aria-disabled="true">Preeclampsia adatbázis</a>
     </div>
   </nav>
   <router-view/>
@@ -56,8 +50,8 @@ body {
 import  store  from "@/store/index.js"
 export default {
   name: 'App',
-  mounted: function (){
-    store.dispatch("dummyLoad")
+  created: function (){
+    store.dispatch("dummyStartupLoad")
   }
 }
 

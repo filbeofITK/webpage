@@ -13,7 +13,10 @@ export default createStore({
     }
   },
   mutations: {
-
+    addCardData (state,data){
+      state.cards.push(data)
+    },
+    //addFullData(state,id){},
 
     //DUMMY loaders
     addDummyCardData (state, data){
@@ -24,7 +27,7 @@ export default createStore({
       if(-1 === idx){
         state.openInstances.push({
           id: id,
-          title: "Title " + (id+1),
+          title: "Title " + (parseInt(id) + 1),
           abst: "Abstract",
           date: "2020.02.01",
           source: "https://example.com",
@@ -62,7 +65,7 @@ export default createStore({
     },
 
     //Loads set of Dummy card data
-    dummyLoad (context) {
+    dummyStartupLoad (context) {
       for (var i = 0; i < context.state.numofCardstoDisplay; i++) {
         context.commit("addDummyCardData",
         {
