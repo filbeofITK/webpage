@@ -31,7 +31,7 @@
             </div>
             <div class="row">
               <router-link :to="{ name: 'about', params: {instanceID: incomingData.id} }">
-                <button class="btn btn-primary" @click="loadInstanceData">Open Full</button>
+                <button class="btn btn-primary">Open Full</button>
               </router-link>
             </div>
 
@@ -48,8 +48,6 @@
 </template>
 
 <script>
-import  store  from "@/store/index.js"
-
 export default {
   name: 'DataCard',
   props: ["incomingData"],
@@ -61,9 +59,6 @@ export default {
   methods:{
     toggleCard(){
       this.activity = !this.activity
-    },
-    loadInstanceData(){
-      store.dispatch("dummyLoadByID",this.incomingData.id)
     }
   }
 }
