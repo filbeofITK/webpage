@@ -3,8 +3,6 @@
     <input type="search" v-model="searchATitle"
     class="form-control rounded bg-dark text-white" placeholder="Search article by title" />
     <button type="button" @click="searchArticleByTitle" class="btn rounded btn-dark">Keresés</button>
-    <button type="button" @click="toggleBar" class="btn rounded btn-dark">{{ this.buttonText }}</button>
-
     <input type="search" v-model="searchBTitle"
     class="form-control rounded bg-dark text-white" placeholder="Search by biomarker name" />
     <button type="button" @click="searchBiomarkerByName" class="btn rounded btn-dark">Keresés</button>

@@ -20,8 +20,14 @@
 
 <script>
 // @ is an alias to /src
-import DataCard from "@/components/DataCard.vue"
-import SearchBar from "@/components/SearchBar.vue"
+import { defineAsyncComponent } from 'vue'
+
+const DataCard = defineAsyncComponent(() =>
+  import("@/components/DataCard.vue")
+)
+const SearchBar = defineAsyncComponent(() =>
+  import("@/components/SearchBar.vue")
+)
 
 export default {
   name: 'HomeView',
