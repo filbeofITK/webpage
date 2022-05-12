@@ -1,10 +1,10 @@
 <template>
   <div class="input-group bg-dark">
     <input type="search" v-model="searchATitle"
-    class="form-control rounded bg-dark text-white" placeholder="Search article by title" />
+    class="form-control rounded bg-dark text-white" placeholder="Keresés cikk címe alapján." />
     <button type="button" @click="searchArticleByTitle" class="btn rounded btn-dark">Keresés</button>
     <input type="search" v-model="searchBTitle"
-    class="form-control rounded bg-dark text-white" placeholder="Search by biomarker name" />
+    class="form-control rounded bg-dark text-white" placeholder="Keresés biomarker név alapján." />
     <button type="button" @click="searchBiomarkerByName" class="btn rounded btn-dark">Keresés</button>
   </div>
 
